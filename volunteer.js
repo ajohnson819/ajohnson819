@@ -19,24 +19,11 @@ for (let i = 1; i <= 10; i++) {
 document.querySelector('main').innerHTML = html;
 
 //this funct is to demonstrate a list being created by the user 
-let volunteerItems-1 = [
-  'A Rake',
-  'Gardening Gloves',
-  'A Shovel',
-  'Cardboard Bags',
-];
-
-let volunteerItems-2 = [
-  for (i = 0; i < 4; i++) {
-    prompt("What item would you like to bring?");
-  }
-];
-
 
 function createList(arr) {
   let items = '';
   for (i = 0; i < arr.length[i]; i++) {
-    items += `<li>${arr[i]}</li>`
+    items += `<li>${volunteerItems[i]}</li>`
   }
   return items;
 }
@@ -45,11 +32,5 @@ function createList(arr) {
 document.querySelector('.volunteer-items').innerHTML = `
 <ol>
  ${createList(volunteerItems-1)}
-</ol>
-`;
-
-document.querySelector('.volunteer-items-2').innerHTML = `
-<ol>
- ${createList(volunteerItems2)}
 </ol>
 `;
