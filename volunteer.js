@@ -4,7 +4,7 @@
 let showTime = new Date();
 
 document.getElementById("showTime").innerHTML = showTime;
-
+/*
 let html = '';
 const randomColor = () => Math.floor(Math.random() * 256) ;
 
@@ -17,6 +17,7 @@ for (let i = 1; i <= 10; i++) {
   html += `<div style="background-color: ${randomRGB(randomColor)}">${i}</div>`;
 }
 document.querySelector('main').innerHTML = html;
+*/
 
 //this funct is to demonstrate a list being created by the user 
 
@@ -29,8 +30,8 @@ function createList(arr) {
 }
 
 
-document.querySelector('.volunteer-items').innerHTML = `
-<ol>
- ${createList(volunteerItems-1)}
-</ol>
+document.querySelector('.volunteeritems').innerHTML = `
+  <ol>
+    ${createList(volunteerItems)}
+  </ol>
 `;

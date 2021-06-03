@@ -35,7 +35,7 @@ main {
 }
 
 /******************************
-Three options css settings
+Three options aka fieldset css settings
 *******************************/
 .options {
   display: flex;
@@ -43,15 +43,17 @@ Three options css settings
   min-height: auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: auto;
+  margin: 2rem;
+  padding: 5px;
   justify-content: space-evenly;
 } 
 
 .contentOne {
   display: flex;
   flex: 1 50%;
-  margin: auto;
-  color: cornsilk
+  margin: 1rem;
+  color: cornsilk;
+  padding: 5px;
 }
 
 
@@ -63,7 +65,8 @@ Flexbox Layout
 .header, div {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 2;
+    margin: auto;
   }
   
   .header {
@@ -83,9 +86,10 @@ Flexbox Layout
   @media all and (min-width: 320px) {
     body {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex: 1;
       background-color: bisque;
+      margin: auto;
     }
   }
   @media all and (min-width: 640px) {
@@ -110,6 +114,7 @@ Flexbox Layout
       flex: none;
       flex: 1;
       background-color: cornsilk;
+      flex-direction: column;
      }
   }
   
@@ -144,7 +149,7 @@ Flexbox Layout
     }
   }
 
-  @media all and (min-width: 1008px) /*This is the largest setting*/ {
+  @media all and (min-width: 1008px) /*This is the largest setting*/ 
     /*
     display: flex;
     flex-direction: row;
