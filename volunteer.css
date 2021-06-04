@@ -46,9 +46,10 @@ Three options aka fieldset css settings
   margin: 2rem;
   padding: 5px;
   justify-content: space-evenly;
-} 
 
-.contentOne {
+} 
+/*
+.space_one {
   display: flex;
   flex: 1 50%;
   margin: 1rem;
@@ -56,7 +57,7 @@ Three options aka fieldset css settings
   padding: 5px;
 }
 
-
+*/
 
 /******************************
 Flexbox Layout
