@@ -34,9 +34,16 @@ function createList(arr) {
 /* functions that call, manipulate and listen */
 ///////////////////////////////////////////
 
-const myHeader = document.getElementsByClassName('header')
+const header = document.getElementsByClassName('header');
+const myButton = document.getElementsByClassName('myButton');
+const myTextInput = document.getElementsByClassName('myInput');
 
-myHeader.addEventListener('click', () => {
-    myHeader.style.color = 'tomato';
+header.addEventListener('click', () => {
+    header.style.color = 'tomato';
 });
+
+myButton.addEventListener('click', () => {
+  myButton.style.color = myTextInput.value;
+});
+
 
