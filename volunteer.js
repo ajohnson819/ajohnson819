@@ -29,20 +29,14 @@ function createList(arr) {
   return items;
 }
 
-let volunteerItems = '';
-document.querySelector('.volunteeritems').innerHTML = `
-  <ol>
-    ${createList(volunteerItems)}
-  </ol>
-`;
 
 ///////////////////////////////////////////
 /* functions that call, manipulate and listen */
 ///////////////////////////////////////////
 
-const heading = document.getElementById('heading');
+const header = document.getElementById('header');
 
-heading.addEventListener('click', () => {
-  heading.style.color = 'pink';
+header.addEventListener('click', () => {
+  header.style.color = 'pink';
 });
 
