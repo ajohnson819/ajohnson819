@@ -48,16 +48,10 @@ Three options aka fieldset css settings
   justify-content: space-evenly;
 
 } 
-/*
-.space_one {
-  display: flex;
-  flex: 1 50%;
-  margin: 1rem;
-  color: cornsilk;
-  padding: 5px;
-}
-
-*/
+ #email, #name, #numVolunteers, #date {
+    padding: 5px;
+    margin: 1rem;
+ }
 
 /******************************
 Flexbox Layout

@@ -29,9 +29,20 @@ function createList(arr) {
   return items;
 }
 
-
+let volunteerItems = '';
 document.querySelector('.volunteeritems').innerHTML = `
   <ol>
     ${createList(volunteerItems)}
   </ol>
 `;
+
+///////////////////////////////////////////
+/* functions that call, manipulate and listen */
+///////////////////////////////////////////
+
+const heading = document.getElementById('heading');
+
+heading.addEventListener('click', () => {
+  myHeading.style.color = 'pink';
+});
+
