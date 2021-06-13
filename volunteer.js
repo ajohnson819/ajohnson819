@@ -43,6 +43,6 @@ document.querySelector('.volunteeritems').innerHTML = `
 const heading = document.getElementById('heading');
 
 heading.addEventListener('click', () => {
-  myHeading.style.color = 'pink';
+  heading.style.color = 'pink';
 });
 
