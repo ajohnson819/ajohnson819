@@ -51,6 +51,7 @@ Three options aka fieldset css settings
  #email, #name, #numVolunteers, #date {
     padding: 5px;
     margin: 1rem;
+    border-radius: 0 50 0 50;
  }
 
 /******************************
