@@ -34,9 +34,9 @@ function createList(arr) {
 /* functions that call, manipulate and listen */
 ///////////////////////////////////////////
 
-const myHeader = document.getElementsByClassName('header');
+const myHeader = document.getElementsByClassName('header')
 
 myHeader.addEventListener('click', () => {
-  myHeader.style.color = 'pink';
+    myHeader.style.color = 'tomato';
 });
 
