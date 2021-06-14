@@ -45,8 +45,7 @@ Three options aka fieldset css settings
   flex-wrap: wrap;
   margin: 2rem;
   padding: 5px;
-  justify-content: space-evenly;
-
+  
 } 
  #email, #name, #numVolunteers, #date {
     padding: 5px;
