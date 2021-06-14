@@ -11,6 +11,7 @@
     <link rel = "stylesheet" href = "volunteerTwo.css">
     <link rel = "stylesheet" href = "selectors.css">
     
+    
     <script>
         function displayDate() {
             document.getElementById("showTime").innerHTML = Date();
@@ -19,7 +20,7 @@
     
     <script>
         function header() {
-            document.getElementByClassName("header").innerHTML = header();
+            document.getElementByClassName("header").innerHTML = Date();
         }
     </script>
 
@@ -29,6 +30,9 @@
 
 <body>
     <header>
+        <p id = "showTime"></p>
+        <button id = "showTimeype = "button" onclick = "displayDate()">Show Date</button>
+
         <form action = "index.html" method = "post">
             <img src = "">
             <h1 class = "header" >Volunteer Sign-Ups!</h1>
@@ -76,7 +80,7 @@
 </p>
         </div>  
 
-        <div class = "volunteertems">
+        <div class = "volunteerItems">
             <h2> The List of Items to Bring: </h2>
             <ol>
                 <li>Hat</li>
@@ -88,10 +92,10 @@
 
 
     </main>
-    <footer id = "showTime">
-        <!-- display time and date for the footer-->
-          
+    <footer class = "footer">
+       <p>Thanks for Visiting!</p>   
     </footer>
+    
     <script src = "volunteer.js" rel = "js_functions"></script>
 </body>
 </html>
