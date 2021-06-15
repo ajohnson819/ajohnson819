@@ -30,15 +30,16 @@
 
 <body>
     <header>
-        <p id = "showTime"></p>
-        <button id = "showTimeype = "button" onclick = "displayDate()">Show Date</button>
+      
+        <div class = "buttonTwo">
+            <form action = "index.html" method = "post">
+                <img src = "">
+                <h1 class = "header" >Volunteer Sign-Ups!</h1>
+                <input class = "myTextInput" >
+                <button class = "myButton" type = "text">Change The Heading Color!</button>
+            </form>
+        </div>
 
-        <form action = "index.html" method = "post">
-            <img src = "">
-            <h1 class = "header" >Volunteer Sign-Ups!</h1>
-            <input class = "myTextInput" >
-            <button class = "myButton" type = "text">Change The Heading Color!</button>
-        </form>
     </header>
     <main>
     <fieldset class = "options">
@@ -70,6 +71,7 @@
     </fieldset>
 
         <div class = "mission_statement">
+            <h2>Mission Statement:</h2>
             <p>This website is all about volunteers!</p>
             <p>Our goal is to make it as easy as possible to generate a sign-up sheet and get your project underway!</p>
         </div>
@@ -93,7 +95,12 @@
 
     </main>
     <footer class = "footer">
-       <p>Thanks for Visiting!</p>   
+       <p>Thanks for Visiting!</p>
+    
+    <div class = "buttonOne"> 
+        <p id = "showTime"></p>
+        <button id = "showTime_button" onclick = "displayDate()">Show Date</button>
+   </div>   
     </footer>
     
     <script src = "volunteer.js" rel = "js_functions"></script>
