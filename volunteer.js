@@ -13,5 +13,3 @@ Other features can be added to this list with mentor or staff permission, but we
 
 Ask your mentors or staff if there’s something you want to do but doesn’t fit into these requirements. As long as it’s a good demonstration of your programming skills, it almost certainly will count!  Basically, we just want to see you do something interesting and challenging, so don’t let these requirements stifle your creativity!
 
-*/
-

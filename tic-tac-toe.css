@@ -1,0 +1,51 @@
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 610px;
+    height: 610px;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.grid div {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+.playerX {
+   background-image: url('x.jpg'); 
+}
+
+.playerO {
+    background-image: url('o.jpg');
+}
+
+   /******************************
+    screen sizes
+  *******************************/
+
+  /* mobile first!! */
+  @media all and (min-width: 320px) {
+    body {
+      flex-direction: column;
+  }
+  }
+  @media all and (min-width: 640px) {
+    body {
+      flex-direction: column;
+    }
+  }
+
+  @media all and (min-width: 769px) {
+    body {
+      flex-direction: row;
+    }
+  }
+  
+  @media all and (min-width: 1030px) {
+    body { flex-direction: row; }
+  }
+  
