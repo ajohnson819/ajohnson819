@@ -22,19 +22,14 @@ headingButton.addEventListener('click', () => {
     myHeader.style.color = myHeadingInput.value;
 })
 
-///list buttons
-const toggleList = document.getElementsByClassName('toggleList');
-const listDiv = document.querySelector('list');
-const descriptionP = document.querySelector('p.description');
-const descriptionInput = document.querySelector('input.description');
-const descriptionButton = document.querySelector('button.description');
-const addItemButton = document.getElementsByClassName('button.addItemButton');
-const addItemInput = document.getElementsByClassName('input.addItemInput');
-const removeItemInput = document.getElementsByClassName('input.removeItemInput');
-
-
-
-toggleList.addEventListener('click', () => {
+////////////////////list buttons//////////////////////
+//---------------------------------------
+//hide list button
+const toggleListButton = document.getElementsByClassName('toggleList.description');
+//the list, not a button
+const listDiv = document.querySelector('listOfItems');
+//the event listener for toggle button
+toggleListButton.addEventListener('click', () => {
     if (listDiv.style.display === 'none') {
         toggleList.textContent = 'Hide list';
         listDiv.style.display = 'block';
@@ -44,10 +39,22 @@ toggleList.addEventListener('click', () => {
     }
 })
 
+
+// the list description button
+const descriptionInput = document.querySelector('input.description');
+const descriptionP = document.querySelector('p.description');
+const descriptionButton = document.querySelector('button.description');
+//the event listner assigned to the list description modifier
 descriptionButton.addEventListener('click', () => {
-    descriptionP.innerHTML.descriptionInput.value + ':'
+    descriptionP.textContent.descriptionInput.value + ':'
 })
 
+
+//add and remove buttons
+const addItemButton = document.getElementsByClassName('button.addItemButton');
+const addItemInput = document.getElementsByClassName('input.addItemInput');
+const removeItemInput = document.getElementsByClassName('input.removeItemInput');
+//the event listeners for adding/removing content
 addItemButton.addEventListener('click', () => {
     let ul = document.createElement('ul')[0];
     let li = document.createElement('li');
