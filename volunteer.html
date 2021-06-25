@@ -31,12 +31,13 @@
 <body>
     <header>
       
-        <div class = "buttonTwo">
+        <div class = "changeHeading">
             <form action = "index.html" method = "post">
-                <img src = "">
+                
                 <h1 class = "header" >Volunteer Sign-Ups!</h1>
-                <input class = "myTextInput" >
-                <button class = "myButton" type = "text">Change The Heading Color!</button>
+
+                <input type = "text" class = "headingInput">
+                <button class = "changeHeadingButton" type = "text">Change The Heading Color!</button>
             </form>
         </div>
 
@@ -82,15 +83,30 @@
 </p>
         </div>  
 
-        <div class = "volunteerItems">
-            <h2> The List of Items to Bring: </h2>
-            <ol>
-                <li>Hat</li>
-                <li>Gloves</li>
-                <li>Rake</li>
-                <li>Cardboard Bags</li>
-            </ol>
-        </div>    
+        
+    <p id = 'necessaryGearBanner'>Make sure to bring the necessary gear!</p>
+      
+    
+    <div class = "volunteerItemsList">
+        <button class = 'toggleList'>Hide List</button>  
+        <p id = 'description'> The List of Items to Bring: </p>
+        
+        <ul class = 'list'>
+            <div>Hat</div>
+            <div>Shovel</div>
+            <div>Gloves</div>
+            <div>Water Bottles</div>
+        </ul>
+
+        <input class ='description' type = 'text'>
+        <button class = 'description'>Change Your List Description</button>
+
+        <input class = 'addItemInput' type = 'text'>
+        <button class = "addItemButton">Add Items</button>
+
+       <input type = 'text' class = removeItemInput> 
+       <button class = removeItemButton>Remove Item</button>
+    </div>    
 
 
     </main>
@@ -98,9 +114,9 @@
     <footer class = "footer">
        <p>Thanks for Visiting!</p>
     
-    <div class = "buttonOne"> 
+    <div class = "showTimeButton"> 
         <p id = "showTime"></p>
-        <button id = "showTime_button" onclick = "displayDate()">Show Date</button>
+        <button id = "showTimeButton" onclick = "displayDate()">Show Date</button>
    </div>   
 
 <nav class="tic-tac-toe">

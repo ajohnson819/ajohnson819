@@ -12,4 +12,55 @@ Allow the user to rearrange or move items by clicking and dragging an element on
 Other features can be added to this list with mentor or staff permission, but we want to see you stretch your skills, so you’ll want to pick something challenging.
 
 Ask your mentors or staff if there’s something you want to do but doesn’t fit into these requirements. As long as it’s a good demonstration of your programming skills, it almost certainly will count!  Basically, we just want to see you do something interesting and challenging, so don’t let these requirements stifle your creativity!
+*/
+/////heading button
+const myHeader = document.querySelector('.header');
+const headingButton = document.querySelector('.changeHeadingButton');
+const myHeadingInput = document.querySelector('.headingInput');
 
+headingButton.addEventListener('click', () => {
+    myHeader.style.color = myHeadingInput.value;
+})
+
+///list buttons
+const toggleList = document.getElementsByClassName('toggleList');
+const listDiv = document.querySelector('list');
+const descriptionP = document.querySelector('p.description');
+const descriptionInput = document.querySelector('input.description');
+const descriptionButton = document.querySelector('button.description');
+const addItemButton = document.getElementsByClassName('button.addItemButton');
+const addItemInput = document.getElementsByClassName('input.addItemInput');
+const removeItemInput = document.getElementsByClassName('input.removeItemInput');
+
+
+
+toggleList.addEventListener('click', () => {
+    if (listDiv.style.display === 'none') {
+        toggleList.textContent = 'Hide list';
+        listDiv.style.display = 'block';
+    } else {
+        toggleList.textContent = 'Show list';
+        listDiv.style.display = 'none'
+    }
+})
+
+descriptionButton.addEventListener('click', () => {
+    descriptionP.innerHTML.descriptionInput.value + ':'
+})
+
+addItemButton.addEventListener('click', () => {
+    let ul = document.createElement('ul')[0];
+    let li = document.createElement('li');
+    //text content selects the text we want to contain
+    li.textContent = addItemInput.value;
+    ul.appendChild(li);
+    addItemInput.value = ''
+})
+
+removeItemButton.addEventListener('click', () => {
+    let ul = document.createElement('ul')[0];
+    let li = document.querySelector('li:last-child');
+    //text content selects the text we want to contain
+    ul.removeChild(li);
+    
+}) 
