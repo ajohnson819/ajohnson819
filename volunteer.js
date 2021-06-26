@@ -10,14 +10,17 @@ Create one or more JavaScript objects (such as with multiple values contained in
 Show/hide one or more content areas or elements on your site through clicking a button or some other user interaction - must be done with some JavaScript code. 
 Allow the user to rearrange or move items by clicking and dragging an element on your site
 Other features can be added to this list with mentor or staff permission, but we want to see you stretch your skills, so you’ll want to pick something challenging.
-
 Ask your mentors or staff if there’s something you want to do but doesn’t fit into these requirements. As long as it’s a good demonstration of your programming skills, it almost certainly will count!  Basically, we just want to see you do something interesting and challenging, so don’t let these requirements stifle your creativity!
 */
 /////heading button
-const myHeader = document.querySelector('.header');
+const myHeader = document.querySelector('header');
 const headingButton = document.querySelector('.changeHeadingButton');
 const myHeadingInput = document.querySelector('.headingInput');
 
+/*
+puzzle: when I change the header to .header the event listener says it's null, but if I grab the whole tag, it works.
+Why? Also, the heading Button doesn't work.
+*/
 document.querySelector('header').addEventListener('click', function(e) {
     console.log(e.target);
     console.log('clicked');
