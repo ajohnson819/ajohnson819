@@ -18,46 +18,56 @@ const myHeader = document.querySelector('.header');
 const headingButton = document.querySelector('.changeHeadingButton');
 const myHeadingInput = document.querySelector('.headingInput');
 
+document.querySelector('header').addEventListener('click', function(e) {
+    console.log(e.target);
+    console.log('clicked');
+    myHeader.style.color = myHeadingInput.value;
+})
+/*
 headingButton.addEventListener('click', () => {
     myHeader.style.color = myHeadingInput.value;
 })
-
+*/
 ////////////////////list buttons//////////////////////
 //---------------------------------------
 //hide list button
-const toggleListButton = document.getElementsByClassName('toggleList.description');
+const toggleListButton = document.getElementById('toggleList');
 //the list, not a button
-const listDiv = document.querySelector('listOfItems');
+const listDiv = document.querySelectorAll('ul');
 //the event listener for toggle button
 toggleListButton.addEventListener('click', () => {
     if (listDiv.style.display === 'none') {
-        toggleList.textContent = 'Hide list';
+        toggleListButton.textContent = 'Hide list';
         listDiv.style.display = 'block';
     } else {
-        toggleList.textContent = 'Show list';
+        toggleListButton.textContent = 'Show list';
         listDiv.style.display = 'none'
     }
 })
 
 
-// the list description button
+// the list description button where the user modifies the list name
 const descriptionInput = document.querySelector('input.description');
 const descriptionP = document.querySelector('p.description');
-const descriptionButton = document.querySelector('button.description');
+const descriptionButton = document.getElementsByClassName('button.description');
+
 //the event listner assigned to the list description modifier
 descriptionButton.addEventListener('click', () => {
-    descriptionP.textContent.descriptionInput.value + ':'
+    descriptionP.innerHTML.descriptionInput.value + ':'
 })
 
 
 //add and remove buttons
-const addItemButton = document.getElementsByClassName('button.addItemButton');
+const addItemButton = document.querySelector('.addItemButton');
 const addItemInput = document.getElementsByClassName('input.addItemInput');
 const removeItemInput = document.getElementsByClassName('input.removeItemInput');
+const removeItemButton = document.querySelector('.removeItemButton');
+
 //the event listeners for adding/removing content
 addItemButton.addEventListener('click', () => {
     let ul = document.createElement('ul')[0];
     let li = document.createElement('li');
+
     //text content selects the text we want to contain
     li.textContent = addItemInput.value;
     ul.appendChild(li);

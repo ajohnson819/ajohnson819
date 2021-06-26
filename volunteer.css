@@ -98,7 +98,7 @@ footer {
   background: linear-gradient(45deg, #b9bde6 0%, #1C6EA4 37%, #C59237 100%);
   }
 
- h1 {
+ h1, .buttonsFieldset {
   -webkit-box-shadow: 5px 5px 15px 5px #000000; 
   box-shadow: 5px 5px 15px 5px #000000;
  } 
@@ -111,7 +111,7 @@ footer {
 /******************************
 ///////Fieldsets/////////////
 *******************************/
-.options, .buttonsFieldset {
+.options, .buttonsFieldset, footer {
   display: flex;
   flex: 1 100%;
   min-height: auto;
