@@ -5,7 +5,7 @@ Create a form (such as a ‘Contact Us’ form), validate at least one field (ex
 Create a JavaScript function that performs some form of mathematical operation (calculates something) and displays the result on your page or otherwise uses that value to do something on the site.
 Create and populate a JavaScript array with one or more values and display the contents of some or all of the array on your page
 Create a Javascript loop that dynamically displays HTML on your page - for example displaying a number of list items <li> based on how many times you loop
-Create at least 3 variables (var, const, or let), set their values in JavaScript, and display the values somewhere on your page
+Create at least 3 variables (var, let, or let), set their values in JavaScript, and display the values somewhere on your page
 Create one or more JavaScript objects (such as with multiple values contained in { }’s), modify at least one value of that object, and display it on your site
 Show/hide one or more content areas or elements on your site through clicking a button or some other user interaction - must be done with some JavaScript code. 
 Allow the user to rearrange or move items by clicking and dragging an element on your site
@@ -13,18 +13,39 @@ Other features can be added to this list with mentor or staff permission, but we
 Ask your mentors or staff if there’s something you want to do but doesn’t fit into these requirements. As long as it’s a good demonstration of your programming skills, it almost certainly will count!  Basically, we just want to see you do something interesting and challenging, so don’t let these requirements stifle your creativity!
 */
 /////heading button
-const myHeader = document.querySelector('header');
-const headingButton = document.querySelector('.changeHeadingButton');
-const myHeadingInput = document.querySelector('.headingInput');
+let myHeader = document.getElementById("header");
+let headingButton = document.getElementById("changeHeadingButton");
+let myHeadingInput = document.getElementById("headingInput");
+
+//querySelectors are dynamic and let is static
+//const < let
+//class = arrays
+//buttons work better with buttons if you're doing click events
 
 /*
 puzzle: when I change the header to .header the event listener says it's null, but if I grab the whole tag, it works.
-Why? Also, the heading Button doesn't work.
+Why? Also, the heading Button doesn't work. I thought it was the quotations, but it wasn't that.
+I thought it was the type of button, so I changed it type=button, then type=submit but that didn't work either.
+
 */
-document.querySelector('header').addEventListener('click', function(e) {
+//style idea: selector first --> add event listner 
+//DARK MODE BUTTON!!!!!!!!!!!!
+//conside accessibility: will someone be able to get the info 
+//accessibility audit 
+headingButton.addEventListener('click', function(e) {
+    //!!!!!So once let variable is made (lines 16-18)
+    //!!!!!It becomes a global variable
+    //any time you take an action with the (e)vent
+    //there's many properties!! 
+    //they're powerful in the translating abilities
+    //it's associated with manipulating an element
+    //e.g. onsubmit for forms
+    //very important for form validation
+    //or if an email address is valid, or a phone # is valid
     console.log(e.target);
     console.log('clicked');
     myHeader.style.color = myHeadingInput.value;
+    myHeadingInput.style.value = '';
 })
 /*
 headingButton.addEventListener('click', () => {
@@ -34,9 +55,9 @@ headingButton.addEventListener('click', () => {
 ////////////////////list buttons//////////////////////
 //---------------------------------------
 //hide list button
-const toggleListButton = document.getElementById('toggleList');
+let toggleListButton = document.getElementById('toggleList');
 //the list, not a button
-const listDiv = document.querySelectorAll('ul');
+let listDiv = document.querySelectorAll('ul');
 //the event listener for toggle button
 toggleListButton.addEventListener('click', () => {
     if (listDiv.style.display === 'none') {
@@ -50,9 +71,9 @@ toggleListButton.addEventListener('click', () => {
 
 
 // the list description button where the user modifies the list name
-const descriptionInput = document.querySelector('input.description');
-const descriptionP = document.querySelector('p.description');
-const descriptionButton = document.getElementsByClassName('button.description');
+let descriptionInput = document.querySelector('input.description');
+let descriptionP = document.querySelector('p.description');
+let descriptionButton = document.getElementsByClassName('button.description');
 
 //the event listner assigned to the list description modifier
 descriptionButton.addEventListener('click', () => {
@@ -61,10 +82,10 @@ descriptionButton.addEventListener('click', () => {
 
 
 //add and remove buttons
-const addItemButton = document.querySelector('.addItemButton');
-const addItemInput = document.getElementsByClassName('input.addItemInput');
-const removeItemInput = document.getElementsByClassName('input.removeItemInput');
-const removeItemButton = document.querySelector('.removeItemButton');
+let addItemButton = document.querySelector('.addItemButton');
+let addItemInput = document.getElementsByClassName('input.addItemInput');
+let removeItemInput = document.getElementsByClassName('input.removeItemInput');
+let removeItemButton = document.querySelector('.removeItemButton');
 
 //the event listeners for adding/removing content
 addItemButton.addEventListener('click', () => {
