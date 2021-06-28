@@ -50,6 +50,7 @@ headingButton.addEventListener('click', function(e) {
     myHeadingInput.style.value = ' ';
 })
 
+
 /////////////////////////////////////////////////////
 //==================options forms====================
 /////////////////////////////////////////////////////
@@ -74,17 +75,25 @@ for (i = 0; i < fillOutForm.length; i++) {
 //---------------------------------------
 //hide list button I replaced const (static) with let (dynamic)
 let toggleListButton = document.getElementById('toggleList');
-let listDiv = document.querySelector('.listOfItems'); //the list
+let listDiv = document.querySelector('.volunteerItemsDiv'); //the list
+
 //the event listener for toggle button
 toggleListButton.addEventListener('click', () => {
-    if ( listDiv.style.display === none ) {
-        toggleListButton.text.content = 'Hide list';
-        listDiv.style.display = "block";
+    if ( listDiv.style.display == 'none' ) {
+        toggleList.textContent = 'Hide list'; 
+        listDiv.style.display = 'block';
+        //meaning if the list in shown in the code bock, the button should say 'hide list'
+         
     } else {
-        toggleListButton.text.content = 'Show list';
-        listDiv.style.display = 'none';
+        toggleList.textContent = 'Show list'
+        listDiv.stlye.display = 'none'; 
     }
+});
+/*
+toggleListButton.addEventListener('click', () => {
+    p.innerHTML = input.value + ':';
 })
+*/ 
 // the list description button where the user modifies the list name
 let descriptionInput = document.querySelector('input.description');
 let descriptionP = document.querySelector('p.description');

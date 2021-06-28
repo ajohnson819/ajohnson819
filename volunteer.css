@@ -80,6 +80,9 @@ but after I added the flex-end attribute to align-content, it centered nicely*/
 #necessaryGearBanner {
   display: inline-flex;
   align-items: center;
+  font-weight: bold;
+  
+  
 }
 
 #necessaryGearBanner:hover { -moz-transform: scale(1.3);
@@ -164,15 +167,12 @@ Corkboard Idea with sticky notes for the options and button forms
 
 .buttonsForm {
     display: inline-flex;
-    margin: auto;
-    flex-direction: row;
-    text-align: center;
+    flex-direction:column;
     flex: 1;
     color: rgb(10, 7, 7);
-    flex-wrap: wrap;
 }
 
-.volunteerItemsList:hover {
+.volunteerItemsDiv:hover {
     color: black;
     background: #666666;
     -webkit-background-clip: text;
@@ -181,7 +181,7 @@ Corkboard Idea with sticky notes for the options and button forms
     text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
 }
 
-#showTimeButton, .addItemButton, .volunteerItemsList.description, .removeItemButton
+#showTimeButton, .addItemButton, .volunteerItemsDiv.description, .removeItemButton
  {
   display: inline-flex;
   background-color: whitesmoke;
