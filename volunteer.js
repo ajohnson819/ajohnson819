@@ -101,10 +101,11 @@ let descriptionP = document.querySelector('p.description');
 let descriptionButton = document.querySelector('button.description');
 
 //the event listner assigned to the list description modifier
-descriptionButton.addEventListener('click', () => {
+
+descriptionButton.addEventListener('click', function() {
     let ul = document.getElementsByTagName('ul');
     let li = document.createElement('li');
-    descriptionP.innerHTML.descriptionInput.value + ':'
+    descriptionP.innerHTML.descriptionInput.value + ':' ;
 })
 
 //add and remove buttons
@@ -118,9 +119,9 @@ addItemButton.addEventListener('click', () => {
     let li = document.createElement('li'); //it'll be created when you appendChild
 
     //text content selects the text we want to contain
-    li.textContent = addItemInput.value;
-    ul.appendChild(li.textContent(addItemInput));
-    addItemInput.value = ''
+   // li.textContent = addItemInput.value;
+    ul.appendChild(li.textContent.(addItemInput.value));
+    addItemInput.value = ' ';
 })
 
 removeItemButton.addEventListener('click', () => {
