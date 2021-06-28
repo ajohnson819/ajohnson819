@@ -60,7 +60,7 @@ main {
 /******************************
       Elements in the body
 *******************************/
-.firstParagraph, p, .volunteerItemsList, .mission_statement {
+.firstParagraph, .mission_statement {
   display: inline-flex;
   align-items: center;
   flex-direction: column;
@@ -90,7 +90,14 @@ transform: scale(1.3);
 display: inline-flex;
 }
 
-/*having fun with css and changing the background*/
+.mission_statement:hover {
+  height: 33%
+  
+}
+
+/*having fun with css and changing the background 
+first Idea is a white gradient look */
+
 footer {
   background: #b9bde6;
   background: -moz-linear-gradient(45deg, #b9bde6 0%, #1c6EA4 37%, #C59237 100%);
@@ -98,7 +105,7 @@ footer {
   background: linear-gradient(45deg, #b9bde6 0%, #1C6EA4 37%, #C59237 100%);
   }
 
- h1, .buttonsFieldset {
+ h1 {
   -webkit-box-shadow: 5px 5px 15px 5px #000000; 
   box-shadow: 5px 5px 15px 5px #000000;
  } 
@@ -107,11 +114,21 @@ footer {
    list-style: none;
    font-weight: bold;
  }
+ 
+
+ 
+
+
 
 /******************************
-///////Fieldsets/////////////
+///////Fieldsets and Forms/////////////
 *******************************/
-.options, .buttonsFieldset, footer {
+ /*
+//////////////////////////////////
+Corkboard Idea with sticky notes for the options and button forms
+//////////////////////////////////
+*/
+.options, .buttonsForm, footer {
   display: flex;
   flex: 1 100%;
   min-height: auto;
@@ -120,7 +137,7 @@ footer {
   margin: 2rem;
   padding: 5px;
   background: transparent;
-  color: darkgreen;
+  color: rgb(2, 51, 2);
 } 
  #email, #name, #numVolunteers, #date {
     padding: 5px;
@@ -145,12 +162,14 @@ footer {
   text-align: center;
 }
 
-.volunteerItemsList {
-    display:flex;
+.buttonsForm {
+    display: inline-flex;
     margin: auto;
+    flex-direction: row;
     text-align: center;
     flex: 1;
-    color: grey;
+    color: rgb(10, 7, 7);
+    flex-wrap: wrap;
 }
 
 .volunteerItemsList:hover {
@@ -173,7 +192,6 @@ footer {
   border: solid grey;
   padding: 5px;
 }
-
 
 /******************************
 Flexbox Layout

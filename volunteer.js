@@ -26,7 +26,9 @@ let myHeadingInput = document.getElementById("headingInput");
 puzzle: when I change the header to .header the event listener says it's null, but if I grab the whole tag, it works.
 Why? Also, the heading Button doesn't work. I thought it was the quotations, but it wasn't that.
 I thought it was the type of button, so I changed it type=button, then type=submit but that didn't work either.
-
+So with a little help from Ryan Sallee, I realized why the event listener didn't work.
+myHeader is already a variable, so I didn't a query selector or document. 
+So that's why I wrote headingButton.addEventListner...etc.
 */
 //style idea: selector first --> add event listner 
 //DARK MODE BUTTON!!!!!!!!!!!!
@@ -45,47 +47,60 @@ headingButton.addEventListener('click', function(e) {
     console.log(e.target);
     console.log('clicked');
     myHeader.style.color = myHeadingInput.value;
-    myHeadingInput.style.value = '';
+    myHeadingInput.style.value = ' ';
 })
+
+/////////////////////////////////////////////////////
+//==================options forms====================
+/////////////////////////////////////////////////////
+
+let fillOutForm = document.querySelectorAll('.options');
+let nameForm = document.querySelector('.nameInput');
+let emailForm = document.querySelector('.emailInput');
+let dateForm = document.querySelector('.datesInput');
+let numberForm = document.querySelector('.numberInput');
 /*
-headingButton.addEventListener('click', () => {
-    myHeader.style.color = myHeadingInput.value;
-})
+for (i = 0; i < fillOutForm.length; i++) {
+    function populateForm(i) {
+        let params = queryString[i].toQueryParams();
+        Object.keys(params).forEach(function(key)) {
+            Form.fillOutForm.setValue(`$(fill out form)[key], params[key]`)
+        }
+    }
+}
 */
+
 ////////////////////list buttons//////////////////////
 //---------------------------------------
-//hide list button
+//hide list button I replaced const (static) with let (dynamic)
 let toggleListButton = document.getElementById('toggleList');
-//the list, not a button
-let listDiv = document.querySelectorAll('ul');
+let listDiv = document.querySelector('.listOfItems'); //the list
 //the event listener for toggle button
 toggleListButton.addEventListener('click', () => {
-    if (listDiv.style.display === 'none') {
-        toggleListButton.textContent = 'Hide list';
-        listDiv.style.display = 'block';
+    if ( listDiv.style.display === none ) {
+        toggleListButton.text.content = 'Hide list';
+        listDiv.style.display = "block";
     } else {
-        toggleListButton.textContent = 'Show list';
-        listDiv.style.display = 'none'
+        toggleListButton.text.content = 'Show list';
+        listDiv.style.display = 'none';
     }
 })
-
-
 // the list description button where the user modifies the list name
 let descriptionInput = document.querySelector('input.description');
 let descriptionP = document.querySelector('p.description');
-let descriptionButton = document.getElementsByClassName('button.description');
+let descriptionButton = document.querySelector('button.description');
 
 //the event listner assigned to the list description modifier
 descriptionButton.addEventListener('click', () => {
+    let ul = document.getElementsByTagName('ul')[0];
+    let li = document.createElement('li');
     descriptionP.innerHTML.descriptionInput.value + ':'
 })
 
-
 //add and remove buttons
-let addItemButton = document.querySelector('.addItemButton');
-let addItemInput = document.getElementsByClassName('input.addItemInput');
-let removeItemInput = document.getElementsByClassName('input.removeItemInput');
-let removeItemButton = document.querySelector('.removeItemButton');
+let addItemButton = document.querySelector('button.addItemButton');
+let addItemInput = document.querySelector('input.addItemInput');
+let removeItemButton = document.querySelector('button.removeItemButton');
 
 //the event listeners for adding/removing content
 addItemButton.addEventListener('click', () => {

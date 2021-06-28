@@ -28,36 +28,6 @@
 
 </head>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Volunteers</title>
-   
-    <link rel = "stylesheet" href = "volunteer.css">
-    <link rel = "stylesheet" href = "volunteerTwo.css">
-    <link rel = "stylesheet" href = "selectors.css">
-    
-    
-    <script>
-        function displayDate() {
-            document.getElementById("showTime").innerHTML = Date();
-        }
-    </script>
-    
-    <script>
-        function header() {
-            document.getElementByClassName("header").innerHTML = Date();
-        }
-    </script>
-
-    <script src="https://kit.fontawesome.com/8340402245.js" crossorigin="anonymous"></script>
-
-</head>
-
 <body>
     <header>
         <div class = "changeHeading"> 
@@ -81,54 +51,58 @@
         <form class = "options">
             <div class = "nameInput">
                 <label for = "name">Name:</label>
-                <input type = "text" id = "name" name = "user_name">
+                <input type = "text" id = "name" name = "user_name" size = '12'>
             </div>
     
             
             <div class = "emailInput">
                 <label for = "email">Email:</label>
-                <input type = "text" id = "email" name = "user_email">
+                <input type = "text" id = "email" name = "user_email" size = '12'>
             </div> 
     
             
             <div class = "datesInput">
                 <label for = "date">Dates when you want to work:</label>
-                <input type = "text" id = "date" name = "user_date"> 
+                <input type = "text" id = "date" name = "user_date" size = '12'> 
             </div>
     
             <div class = "numberInput">
                 <label for = "numVolunteers">How many people are volunteering with you?</label>
-                <input type = "text" id = "numVolunteers" name = "number_of_volunteers"> 
+                <input type = "text" id = "numVolunteers" name = "number_of_volunteers" size = '12'> 
             </div>
         </form>
-      
-        <div class = "firstParagraph">
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            <div id = 'fillerParagraphs'>
+                <div class = "firstParagraph">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
-</p>
-        </div>  
+        </p>
+                </div>  
 
-    <!-- here is the hide button -->
+                <div class = "secondParagraph">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
-    
-    <form class = 'buttonsFieldset'> 
+        </p>
+                </div>
+            </div>>
+
+    <form class = 'buttonsForm'> 
         <div class = "volunteerItemsList">
             <p id = 'necessaryGearBanner'>Make sure to bring the necessary gear!</p>
+            
+             <!-- here is the hide button -->
             <button id = 'toggleList'>Hide List</button>  
         
-    <!-- here is the description button to modify name of list -->     
-    
-            <p class = 'listName'> The List of Items to Bring: </p>
+            <p class = 'description'> The List of Items to Bring: </p>
+            <!-- here is the description button to modify name of list -->  
+            <input class ='description' type = 'text'>
+            <button class = 'description'>Change List Description</button>
             <ul class = 'listOfItems'>
                 <div>Hat</div>
                 <div>Shovel</div>
                 <div>Gloves</div>
                 <div>Water Bottles</div>
             </ul>
-
-            <input class ='description' type = 'text'>
-            <button class = 'description'>Change List Description</button>
-        
+            
     <!-- here is the add/remove content buttons -->
             
             <!-- add button-->
@@ -136,102 +110,6 @@
             <button class = "addItemButton">Add Items</button>
 
             <!-- remove button-->
-            <button class = removeItemButton>Remove Item</button>
-        </div>    
-     </form>   
-
-    </main>
-
-    <footer class = "footer">
-       <p>Thanks for Visiting!</p>
-    
-    <div class = "showTimeButton"> 
-        <p id = "showTime"></p>
-        <button id = "showTimeButton" onclick = "displayDate()">Show Date</button>
-   </div>   
-
-<nav class="tic-tac-toe">
-    <ol>
-        <li class=""><a href="tic-tac-toe.html">Want to play Tic-Tac-Toe?</a></li>
-    </ol>
-</nav>
-
-    </footer>
-    <script src = "volunteer.js" rel = "js_functions"></script>
-</body>
-</html>
--->
-<body>
-    <header>
-      
-        <div class = "changeHeading">
-                <h1 class = "header">Volunteer Sign-Ups!</h1>
-                <input type = "text" class = "headingInput">
-                <button class = "changeHeadingButton" type = "text">Change The Heading Color!</button>
-        </div>
-
-    </header>
-    <main>
-    
-
-        <div class = "mission_statement">
-            <h2 class = "missionBanner" >Mission Statement:</h2>
-            <p>This website is all about volunteers!</p>
-            <p>Our goal is to make it as easy as possible to generate a sign-up sheet and get your project underway!</p>
-        </div>
-
-        <form class = "options">
-            <div class = "nameInput">
-                <label for = "name">Name:</label>
-                <input type = "text" id = "name" name = "user_name">
-            </div>
-    
-            
-            <div class = "emailInput">
-                <label for = "email">Email:</label>
-                <input type = "text" id = "email" name = "user_email">
-            </div> 
-    
-            
-            <div class = "datesInput">
-                <label for = "date">Dates when you want to work:</label>
-                <input type = "text" id = "date" name = "user_date"> 
-            </div>
-    
-            <div class = "numberInput">
-                <label for = "numVolunteers">How many people are volunteering with you?</label>
-                <input type = "text" id = "numVolunteers" name = "number_of_volunteers"> 
-            </div>
-        </form>
-      
-        <div class = "firstParagraph">
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-</p>
-        </div>  
-    <!-- here is the hide button -->
-    <form class = 'buttonsFieldset'> 
-        <div class = "volunteerItemsList">
-            <p id = 'necessaryGearBanner'>Make sure to bring the necessary gear!</p>
-            <button id = 'toggleList'>Hide List</button>  
-    
-    <!-- here is the description button to modify name of list -->       
-            <p class = 'description'> The List of Items to Bring: </p>
-            <ul class = 'listOfItems'>
-                <div>Hat</div>
-                <div>Shovel</div>
-                <div>Gloves</div>
-                <div>Water Bottles</div>
-            </ul>
-
-            <input class ='description' type = 'text'>
-            <button class = 'description'>Change List Description</button>
-
-    <!-- here is the add/remove content buttons -->
-            <input class = 'addItemInput' type = 'text'>
-            <button class = "addItemButton">Add Items</button>
-
-            <input type = 'text' class = removeItemInput> 
             <button class = removeItemButton>Remove Item</button>
         </div>    
      </form>   
