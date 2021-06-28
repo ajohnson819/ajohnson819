@@ -47,7 +47,7 @@ headingButton.addEventListener('click', function(e) {
     console.log(e.target);
     console.log('clicked');
     myHeader.style.color = myHeadingInput.value;
-    myHeadingInput.style.value = ' ';
+    myHeadingInput.value = ' '; //don't use style noob
 })
 
 
@@ -80,13 +80,14 @@ let listDiv = document.querySelector('.volunteerItemsDiv'); //the list
 //the event listener for toggle button
 toggleListButton.addEventListener('click', () => {
     if ( listDiv.style.display == 'none' ) {
+        //.style only reads inline properties
         toggleList.textContent = 'Hide list'; 
         listDiv.style.display = 'block';
         //meaning if the list in shown in the code bock, the button should say 'hide list'
          
     } else {
         toggleList.textContent = 'Show list'
-        listDiv.stlye.display = 'none'; 
+        listDiv.style.display = 'none'; 
     }
 });
 /*
@@ -101,7 +102,7 @@ let descriptionButton = document.querySelector('button.description');
 
 //the event listner assigned to the list description modifier
 descriptionButton.addEventListener('click', () => {
-    let ul = document.getElementsByTagName('ul')[0];
+    let ul = document.getElementsByTagName('ul');
     let li = document.createElement('li');
     descriptionP.innerHTML.descriptionInput.value + ':'
 })
@@ -113,18 +114,18 @@ let removeItemButton = document.querySelector('button.removeItemButton');
 
 //the event listeners for adding/removing content
 addItemButton.addEventListener('click', () => {
-    let ul = document.createElement('ul')[0];
-    let li = document.createElement('li');
+    let ul = document.getElementsByTagName('ul');
+    let li = document.createElement('li'); //it'll be created when you appendChild
 
     //text content selects the text we want to contain
     li.textContent = addItemInput.value;
-    ul.appendChild(li);
+    ul.appendChild(li.textContent(addItemInput));
     addItemInput.value = ''
 })
 
 removeItemButton.addEventListener('click', () => {
-    let ul = document.createElement('ul')[0];
-    let li = document.querySelector('li:last-child');
+    let ul = document.getElementsByTagName('ul');
+    let li = document.querySelector('ul:last-child');
     //text content selects the text we want to contain
     ul.removeChild(li);
     
