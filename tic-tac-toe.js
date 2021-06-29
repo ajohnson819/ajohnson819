@@ -28,17 +28,3 @@ enables the squares to be clicked
         }
     }
 });
-//the next part is for the win-scenario... fairly difficult...
-/*
-function checkWin()
-{
-    //I chose textContent instead of innerHTML because
-    //some website said it was better... no clue
-    var str = ""
-    for (var i = 0; i < 9; i++)
-        str += squares[i].textContent
-// if(condition one| condition two| condition three/.test(str))
-        if (squares[0]&&squares[1]&&squares[2]) 
-        alert("Win")
-}
-*/
