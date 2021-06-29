@@ -24,7 +24,7 @@
         }
     </script>
 
-    <script src="https://kit.fontawesome.com/8340402245.js" crossorigin="anonymous"></script>
+    <script img="https://kit.fontawesome.com/8340402245.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -47,30 +47,37 @@
             <p>This website is all about volunteers!</p>
             <p>Our goal is to make it as easy as possible to generate a sign-up sheet and get your project underway!</p>
         </div>
+
+        <div class = 'randomPhoto'>
+            <img id ='photo' alt ='random photos of nature and scenery' src = 'https://placeimg.com/300/480/nature'>
+        </div>
+
 <!-- do not mix up form and fieldsets! fieldsets are a sub-unit of forms  -->
-        <form class = "options">
-            <div class = "nameInput">
-                <label for = "name">Name:</label>
-                <input type = "text" id = "name" name = "user_name" size = '12'>
-            </div>
-    
-            
-            <div class = "emailInput">
-                <label for = "email">Email:</label>
-                <input type = "text" id = "email" name = "user_email" size = '12'>
-            </div> 
-    
-            
-            <div class = "datesInput">
-                <label for = "date">Dates when you want to work:</label>
-                <input type = "text" id = "date" name = "user_date" size = '12'> 
-            </div>
-    
-            <div class = "numberInput">
-                <label for = "numVolunteers">How many people are volunteering with you?</label>
-                <input type = "text" id = "numVolunteers" name = "number_of_volunteers" size = '12'> 
-            </div>
-        </form>
+        
+         <div class = 'wrapper'>
+            <form class = 'fillOutForm'>
+                <label id = 'nameField'>
+                    <input type='text' name = 'nameInput' placeholder="name" required/>    
+                </label> 
+                <label id = 'emailField'>
+                    <input type='email' name = 'emailInput' placeholder="email" required/>    
+                </label>  
+                <label id = 'datesField'>
+                    <input type='text' name = 'dateInput' placeholder='when' required/>    
+                </label>
+                <label id = 'passwordField'>
+                    <input type='password' name = 'passwordField' placeholder="password" required/>    
+                </label>
+                <label id = 'verifyPasswordField'>
+                    <input type='submit' value="submit"  name = 'submit' placeholder="verify password"/>    
+                </label>         
+            </form> 
+        </div>
+        
+        <div class = 'randomPhoto'>
+            <a id ='photo' alt ='random photos of nature and scenery' src = 'https://placeimg.com/300/480/nature'></a>
+        </div>
+
             <div id = 'fillerParagraphs'>
                 <div class = "firstParagraph">
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
@@ -115,6 +122,23 @@
 </nav>
 
     </footer>
+    <script >
+        const wrapper = document.querySelector('.wrapper'),
+        form = wrapper.querySelectorAll('.fillOutForm'),
+        submitInput = form[0].querySelector('input[type="submit"]')
+        function getDataForm(e) {
+            e.preventDefault();
+            //this will collect data from the form
+            var formData = new FormData(form[0]);
+            alert(formData.get('nameField') + '-' + formData.get('emailField') + '-' + formData.get('passwordField') )
+        }
+        document.addEventListener('DOMContentLoaded', function() 
+        {
+            submitInput.addEventListener('click', getDataForm, false);
+        },
+             false);
+    </script>
+
     <script src = "volunteer.js" rel = "js_functions"></script>
 </body>
 </html>

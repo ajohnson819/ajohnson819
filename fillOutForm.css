@@ -1,0 +1,21 @@
+.wrapper {
+    width: 300px;
+    max-width: 90%;
+    margin 0 auto;
+}
+
+.wrapper label {
+    display: inline-flex;
+    margin: 0.5em 0;
+}
+
+.wrapper label input {
+    font-size: 18px;
+    padding: 0.5em;
+
+}
+
+.wrapper input[type='submit'] {
+    font-size: 25px;
+    color: blue;
+}

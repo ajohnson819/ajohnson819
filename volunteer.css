@@ -75,6 +75,11 @@ but after I added the flex-end attribute to align-content, it centered nicely*/
   
 }
 
+#photo {
+  display: inline-flex;
+  
+}
+
 
 footer {
   background: #b9bde6;

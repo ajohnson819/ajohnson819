@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Out Form</title>
+</head>
+    <body>
+        <h2>Fill Out Form</h2>
+        <div class = 'wrapper'>
+            <form class = 'fillOutForm'>
+                <label id = 'nameField'>
+                    <input type='text' name = 'nameInput' placeholder="name" required/>    
+                </label> 
+                <label id = 'emailField'>
+                    <input type='email' name = 'emailInput' placeholder="email" required/>    
+                </label>  
+                <label id = 'datesField'>
+                    <input type='text' name = 'dateInput' placeholder='when' required/>    
+                </label>
+                <label id = 'passwordField'>
+                    <input type='password' name = 'passwordField' placeholder="password" required/>    
+                </label>
+                <label id = 'verifyPasswordField'>
+                    <input type='submit' value="submit"  name = 'submit' placeholder="verify password"/>    
+                </label>         
+            </form>
+        </div>
+        <script >
+            const wrapper = document.querySelector('.wrapper'),
+            form = wrapper.querySelectorAll('.fillOutForm'),
+            submitInput = form[0].querySelector('input[type="submit"]')
+            function getDataForm(e) {
+                e.preventDefault();
+                //this will collect data from the form
+                var formData = new FormData(form[0]);
+                alert(formData.get('nameField') + '-' + formData.get('emailField') + '-' + formData.get('passwordField') )
+            }
+            document.addEventListener('DOMContentLoaded', () =>) 
+            {
+                submitInput.addEventListener('click', getDataForm, false);},
+                 false);
+        </script>
+    </body>
+</html>
