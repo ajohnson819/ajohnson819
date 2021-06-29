@@ -84,34 +84,19 @@
         </p>
                 </div>
             </div>
-
-    <form class = 'buttonsForm'> 
-            <h2><title id = 'necessaryGearBanner'> Make sure to bring the necessary gear! </title></h2>
-            
-             <!-- here is the hide button -->
-            <button id = 'toggleList'>Hide List</button>  
-            <div class = "volunteerItemsDiv"></div>
-                <p class = 'description'> The List of Items to Bring: </p>
-                <!-- here is the description button to modify name of list -->  
-                <input class ='description' type = 'text'>
-                <button class = 'description'>Change List Description</button>
-                <ul class = 'listOfItems'>
-                    <li>Hat</li>
-                    <li>Shovel</li>
-                    <li>Gloves</li>
-                    <li>Water Bottles</li>
-                </ul>
-            </div>
-    <!-- here is the add/remove content buttons -->
-            
-            <!-- add button-->
-            <input class = 'addItemInput' type = 'text'>
-            <button class = "addItemButton">Add Items</button>
-
-            <!-- remove button-->
-            <button class = removeItemButton>Remove Item</button>
-        </div>    
      </form>   
+
+            <h2>Items List:</h2>
+            <h4>To add, press the plus sign</h4>
+            <h4>To remove, click once on the item for strikebar</h4>
+            <h4>Doubleclick on item to remove</h4>
+            <div class = 'itemsContainerDiv'>
+                <input id ='inputField' type="text">
+                <button id="addToDo">+</button>
+                <div class='to-dos' id = 'toDoContainer'> 
+                    <p></p>
+                </div>
+            </div>
 
     </main>
 

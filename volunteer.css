@@ -20,26 +20,20 @@ Main Content
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  
 }
-
-div, .options {
-  display:flex;
-  flex-direction: row;
-  flex: 1;
-  margin: auto;
-  justify-content: space-evenly;
-}
-
 main {
   display: flex;
   flex: 1;
   flex-direction: row;
   -ms-flex-align: center;
   min-height: 100vh;
-  margin: auto;
-  font-family: 'Nunito', sans-serif;
   color: #5aa0e6;
   background-color: none;
+  display: flex;
+  width:50%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /******************************
@@ -76,30 +70,11 @@ but after I added the flex-end attribute to align-content, it centered nicely*/
   display: flex;
   align-content: flex-end;
 }
-
-#necessaryGearBanner {
-  display: inline-flex;
-  align-items: center;
-  font-weight: bold;
-  
-  
-}
-
-#necessaryGearBanner:hover { -moz-transform: scale(1.3);
--webkit-transform: scale(1.3);
--o-transform: scale(1.3);
--ms-transform: scale(1.3);
-transform: scale(1.3);
-display: inline-flex;
-}
-
 .mission_statement:hover {
   height: 33%
   
 }
 
-/*having fun with css and changing the background 
-first Idea is a white gradient look */
 
 footer {
   background: #b9bde6;
@@ -118,20 +93,7 @@ footer {
    font-weight: bold;
  }
  
-
- 
-
-
-
-/******************************
-///////Fieldsets and Forms/////////////
-*******************************/
- /*
-//////////////////////////////////
-Corkboard Idea with sticky notes for the options and button forms
-//////////////////////////////////
-*/
-.options, .buttonsForm, footer {
+.options, footer {
   display: flex;
   flex: 1 100%;
   min-height: auto;
@@ -150,10 +112,6 @@ Corkboard Idea with sticky notes for the options and button forms
     color: inherit;
  }
 
- 
-
-
-/* make sure to double check elements, and make sure they match!!!!!!*/
  /******************************
             Buttons
 *******************************/
@@ -165,14 +123,22 @@ Corkboard Idea with sticky notes for the options and button forms
   text-align: center;
 }
 
-.buttonsForm {
+.itemsContainerDiv {
     display: inline-flex;
     flex-direction:column;
     flex: 1;
     color: rgb(10, 7, 7);
 }
 
-.volunteerItemsDiv:hover {
+.itemsContainerDiv:hover { -moz-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  display: inline-flex;
+  }
+  /*or 
+.itemsContainerDiv:hover {
     color: black;
     background: #666666;
     -webkit-background-clip: text;
@@ -180,9 +146,8 @@ Corkboard Idea with sticky notes for the options and button forms
     background-clip: text;
     text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
 }
-
-#showTimeButton, .toggleList, .addItemButton, .volunteerItemsDiv.description, .removeItemButton
- {
+*/
+#showTimeButton {
   display: inline-flex;
   background-color: whitesmoke;
   color: rgb(45, 33, 224);
@@ -197,7 +162,7 @@ Corkboard Idea with sticky notes for the options and button forms
 Flexbox Layout
 *******************************/
 
-.header, div {
+.header {
     display: flex;
     flex-direction: column;
     flex: 2;
