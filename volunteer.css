@@ -105,6 +105,7 @@ footer {
   background: transparent;
   color: rgb(2, 51, 2);
 } 
+/*
  #email, #name, #numVolunteers, #date {
     padding: 5px;
     margin: 1rem;
@@ -112,7 +113,7 @@ footer {
     background: white;
     color: inherit;
  }
-
+*/
  /******************************
             Buttons
 *******************************/
