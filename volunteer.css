@@ -2,8 +2,16 @@
 Class Requirements
 CSS Features List
 A navigation menu that expands and collapses properly at desktop and mobile sizes, such as by switching between vertical and horizontal styles, or is opened and closed by clicking the “hamburger” icon
-Use Flexbox or CSS Grid to organize content areas based on mobile or desktop views. Simply applying a basic flex property so that text wraps as you change screen sizes does not count. You must actually rearrange content or perform some more advanced feature. For example, swapping from a single column layout to a two-column layout on desktop.
-Import Bootstrap from a CDN, then use Bootstrap’s column system to organize content areas based on mobile or desktop views (cannot be used on the same page as the Flexbox/CSS Grid requirement above). Note: Bootstrap is an optional Treehouse video
+--the media queries added
+
+Use Flexbox or CSS Grid to organize content areas based on mobile or desktop views. Simply applying a basic flex property so that text wraps as you change screen sizes does not count. 
+--mobile layout is flex-direction column, all other screens are flex-direction row
+You must actually rearrange content or perform some more advanced feature. For example, swapping from a single column layout to a two-column layout on desktop.
+--done, mine goes from a four column layout to three to two to one as the page gets smaller
+
+Import Bootstrap from a CDN, then use Bootstrap’s column system to organize content areas based on mobile or desktop views (cannot be used on the same page as the Flexbox/CSS Grid requirement above). 
+Note: Bootstrap is an optional Treehouse video
+
 Use “:nth-child” or “nth-of-type” to style a series of elements on your page - for example, change the background color for every other row in a table 
 Perform a Web Accessibility Compliance review on your own site and document all the tools and testing you used to verify your site is accessible. This may involve a written write-up, screenshots, and other ways of showing that you evaluated your site for accessibility compliance. Include the report in your GitHub repository.
 Create your own original CSS animation. For example, create a loading spinner or menu animation. Note: CSS Animations are not included in the assigned Treehouse track, you will have to research this on your own
@@ -75,8 +83,6 @@ but after I added the flex-end attribute to align-content, it centered nicely*/
   
 }
 
-#photo {display: flex;}
-
 footer {
   background: #b9bde6;
   background: -moz-linear-gradient(45deg, #b9bde6 0%, #1c6EA4 37%, #C59237 100%);
@@ -105,15 +111,17 @@ footer {
   background: transparent;
   color: rgb(2, 51, 2);
 } 
-/*
- #email, #name, #numVolunteers, #date {
-    padding: 5px;
-    margin: 1rem;
-    border-radius: 0px 8px 0px 8px;
-    background: white;
-    color: inherit;
- }
-*/
+/******************************
+      Photos
+*******************************/
+.randomPhoto {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+}
+
+#photoNature, #photoArch, #photoPeople {margin: 1rem;}
+
  /******************************
             Buttons
 *******************************/
@@ -181,6 +189,7 @@ Flexbox Layout
   /* mobile first!! */
   @media all and (min-width: 320px) {
     body { flex-direction: column; }
+    .randomPhoto {flex-direction: column;}
  }
 
   @media all and (min-width: 640px) {
@@ -190,9 +199,8 @@ Flexbox Layout
   }
 
   @media all and (min-width: 769px) {
-    body {
-      flex-direction: row;
-    }
+    body { flex-direction: row; }
+    .randomPhoto {flex-direction: row;}
   }
   
   @media all and (min-width: 1030px) {
