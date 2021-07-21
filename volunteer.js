@@ -22,20 +22,17 @@ var myHeader = document.getElementById("header");
 const headingButton = document.getElementById("changeHeadingButton");
 let myHeadingInput = document.getElementById("headingInput");
 
+
 headingButton.addEventListener('click', function(e) {
-    console.log(e.target);
-    console.log('clicked');
     myHeader.style.color = myHeadingInput.value;
-    myHeadingInput.value = ' '; //don't use style noob
+    myHeadingInput.value = ' '; //don't use style noob   
 })
 
-//list buttons
-//hide list button I replaced const (static) with let (dynamic)
 let addToDoButton = document.getElementById('addToDo');
 let toDoContainer = document.getElementById('toDoContainer');
 let inputField = document.getElementById('inputField');
 
-addToDoButton.addEventListener('click', function() {
+addToDoButton.addEventListener('click', () => {
     var paragraph = document.createElement('p')
     paragraph.classList.add('paragraph-styling')
     paragraph.innerText = inputField.value; 

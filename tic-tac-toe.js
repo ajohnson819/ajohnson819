@@ -30,32 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
         checkWin(playerOMoves);
         currentPlayer = 'playerX';
       }
-
-      
-
-/*
-      let horizontalWin = [ [0, 1, 2], [3, 4, 5] ];
-      let verticalWin = [ [0, 3, 6], [1, 4, 7] ] ;
-      let diagonalWin = [ [0, 4, 8], [2, 4, 6] ] ;
-
-      playerXMoves.includes(horizontalWin);
-
-      if (playerXMoves  | playerXMoves == diagonalWin | playerXMoves == verticalWin) {
-        console.log(`${currentPlayer} wins!`);
-    } else if (playerXMoves == horizontalWin | diagonalWin | verticalWin) {
-        console.log(`${currentPlayer} wins!`)
-    } else {
-      console.log(`Cat game!`);
-    }
-*/
-  
     }
   
 
 });
 const winArray = [
   //horizontal win condition
-  [0, 1, 2], [3, 4, 5], [0, 3, 6],
+  [0, 1, 2], [3, 4, 5], [6, 7, 8],
 
   //vertical win conditions
   [0,3,6],[1,4,7],[2, 5, 8],
@@ -67,15 +48,15 @@ const winArray = [
 function checkWin(playerArray) {
   for (let i =0; i<winArray.length; i++) {
     let option = winArray[i]
-    console.log(option);
     for (let j = 0; j < 8; j++) {
       if (playerArray.includes(option[0])&&playerArray.includes(option[1])&&playerArray.includes(option[2])) {
-        alert("You win!")
-      } 
-      
+        alert(`Congrats! You Win!`);
+        break;
+      }
     }  
   } 
-}
+} 
+
 
 
 

@@ -8,6 +8,7 @@
     <link rel = 'stylesheet' href="tic-tac-toe.css">
 </head>
     <body>
+        <h1>Tic Tac Toe!</h1>
         <h3 id = 'player'>PlayerX</h3>
 
         <div class = 'grid'>
@@ -24,10 +25,16 @@
 
         <nav class="returnToTheMainPage">
             <ol>
-                <li class=""><a href="volunteer.html">Return To The Main Page</a></li>
+                <button onclick="window.location ='volunteer.html'">Return To The Main Page</button>  
             </ol>
         </nav>
+
+        <div class = "reloadButton">
+            <button type = "button" class = "reloadButton" onclick="window.location.reload()";>Play Again?</button>
+        </div>
+        
        <script rel = 'js_functions' src = 'tic-tac-toe.js'></script>     
     </body>
 
 </html>
+
