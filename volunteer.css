@@ -173,7 +173,7 @@ footer {
         transform: rotateY(0deg);
     }
     to{
-        transform: rotateY(-288deg);
+        transform: rotateY(-360deg);
     }
 }
 
