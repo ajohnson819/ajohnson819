@@ -112,14 +112,14 @@ footer {
   color: rgb(2, 51, 2);
 } 
 /******************************
-      Photos
+      Photos and a Carousel
 *******************************/
 #carousel {
     width: 30%;
     height: 30%;
     position:-ms-page;
     transform-style: preserve-3d;
-    animation: rotation 20s infinite linear;
+    animation: rotation 40s  infinite linear;
 }
 #carousel:hover{
     animation-play-state: paused;
@@ -141,11 +141,7 @@ footer {
 #carousel figure:nth-child(3){ transform: rotateY(80deg) translateZ(288px);}
 #carousel figure:nth-child(4){ transform: rotateY(120deg) translateZ(288px);}
 #carousel figure:nth-child(5){ transform: rotateY(160deg) translateZ(288px);}
-#carousel figure:nth-child(6){ transform: rotateY(200deg) translateZ(288px);}
-#carousel figure:nth-child(7){ transform: rotateY(240deg) translateZ(288px);}
-#carousel figure:nth-child(8){ transform: rotateY(280deg) translateZ(288px);}
-#carousel figure:nth-child(9){ transform: rotateY(320deg) translateZ(288px);}
-#carousel figure:nth-child(10){ transform: rotateY(360deg) translateZ(288px);}
+
 #carousel img{
     -webkit-filter: grayscale(1);
     cursor: pointer;
@@ -164,6 +160,7 @@ footer {
         transform: rotateY(360deg);
     }
 }
+
 
 
 
