@@ -129,7 +129,7 @@ footer {
     animation-play-state: paused;
 }
 #carousel figure{
-   /*
+   /* this was my first, but the pictures were a bit clunky, 
     display: flex;
     position:inherit;
     width: 90%;
@@ -151,10 +151,10 @@ footer {
   display: flex;
 }
 #carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(430px);}
-#carousel figure:nth-child(2){ transform: rotateY(80deg) translateZ(430px);}
-#carousel figure:nth-child(3){ transform: rotateY(160deg) translateZ(430px);}
-#carousel figure:nth-child(4){ transform: rotateY(240deg) translateZ(430px);}
-#carousel figure:nth-child(5){ transform: rotateY(320deg) translateZ(430px);}
+#carousel figure:nth-child(2){ transform: rotateY(72deg) translateZ(430px);}
+#carousel figure:nth-child(3){ transform: rotateY(144deg) translateZ(430px);}
+#carousel figure:nth-child(4){ transform: rotateY(216deg) translateZ(430px);}
+#carousel figure:nth-child(5){ transform: rotateY(288deg) translateZ(430px);}
 
 
 
@@ -173,7 +173,7 @@ footer {
         transform: rotateY(0deg);
     }
     to{
-        transform: rotateY(-540deg);
+        transform: rotateY(-288deg);
     }
 }
 
