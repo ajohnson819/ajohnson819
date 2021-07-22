@@ -115,16 +115,21 @@ footer {
       Photos and a Carousel
 *******************************/
 #carousel {
+   
     width: 30%;
     height: 30%;
-    position:-ms-page;
+    position: relative; 
     transform-style: preserve-3d;
-    animation: rotation 40s  infinite linear;
+    animation: rotation 30s  infinite linear;
+    /*the perspective is important and needs to be above 1000rem*/
+    perspective: 2000rem;
+    margin: 100px auto 0 auto;
 }
 #carousel:hover{
     animation-play-state: paused;
 }
 #carousel figure{
+   /*
     display: flex;
     position:inherit;
     width: 90%;
@@ -134,19 +139,30 @@ footer {
     background: black;
     overflow: hidden;
     border: solid 5px black;
-    margin: 1rem;
+    margin: 1rem; */
+  position: absolute;
+  width: 300px;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+  display: flex;
 }
-#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
-#carousel figure:nth-child(2){ transform: rotateY(40deg) translateZ(288px);}
-#carousel figure:nth-child(3){ transform: rotateY(80deg) translateZ(288px);}
-#carousel figure:nth-child(4){ transform: rotateY(120deg) translateZ(288px);}
-#carousel figure:nth-child(5){ transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(430px);}
+#carousel figure:nth-child(2){ transform: rotateY(80deg) translateZ(430px);}
+#carousel figure:nth-child(3){ transform: rotateY(160deg) translateZ(430px);}
+#carousel figure:nth-child(4){ transform: rotateY(240deg) translateZ(430px);}
+#carousel figure:nth-child(5){ transform: rotateY(320deg) translateZ(430px);}
+
+
 
 #carousel img{
     -webkit-filter: grayscale(1);
     cursor: pointer;
     transition: all .5s ease;
-    width: 50%;
+    width: 75%;
 }
 #carousel img:hover{
     -webkit-filter: grayscale(0);
@@ -157,7 +173,7 @@ footer {
         transform: rotateY(0deg);
     }
     to{
-        transform: rotateY(360deg);
+        transform: rotateY(-540deg);
     }
 }
 
