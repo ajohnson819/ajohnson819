@@ -166,7 +166,7 @@ footer {
 }
 #carousel img:hover{
     -webkit-filter: grayscale(0);
-    transform: scale(1.2,1.2);
+    transform: scale(2.4,2.4);
 }
 @keyframes rotation{
     from{

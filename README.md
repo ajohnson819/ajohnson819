@@ -13,3 +13,6 @@ Choose at least 1 item off the list of JavaScript Features List below and implem
 Choose at least 1 additional item from any of the lists below and implement it in your project
 
 We recommend you pick a 4th item (or more!) to add, just in case something goes wrong with one of your other items - 3 is only the minimum requirement
+
+I wanted to create a volunteer webpage that made it easy to volunteer for projects. The idea came from a church event. We wanted to create a meal plan, but several websites that I saw were not very helpful.
+One of the first things I did was create a static page using basic HTML5 and CSS3. It was fun. 
