@@ -16,3 +16,9 @@ We recommend you pick a 4th item (or more!) to add, just in case something goes 
 
 I wanted to create a volunteer webpage that made it easy to volunteer for projects. The idea came from a church event. We wanted to create a meal plan, but several websites that I saw were not very helpful.
 One of the first things I did was create a static page using basic HTML5 and CSS3. It was fun. 
+
+I added a carousel for fun and to meet the animation requirement.
+I also wanted to try my hand at the DOM and JS, so I added a way to change the color of the main heading.
+I had fun adding the tic-tac-toe board, as it was by far the greatest JavaScript challenge. 
+The game really showed me how far I needed to go in JS.
+The to-do list features JavaScript again. It was challenging as was the game, and the mentors really came in clutch here.
