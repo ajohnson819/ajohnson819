@@ -28,7 +28,7 @@ As for CSS, I decorated the buttons so that it had contrast.
 Originally, the page was to be smokey with a lot of greys however it did not have enough contrast.  I changed a few of the paragraph's color to blue. 
 The link for tic-tac-toe was changed to blue, but different than the 'show date' button. 
 Display: flex was used throughout. 
-There are 4 media queries, starting with the cell phone width. What the they modify is the form field.
+There are 4 media queries, starting with the cell phone width. What the they modify is the form field, and the paragraphs change colors.
 =================HTML=====================
 The structure is straightforward and entirely within flexbox using the CSS feature display:flex.
 
