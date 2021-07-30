@@ -271,8 +271,9 @@ Flexbox Layout
       margin: 2rem;
       padding: 5px;
       background: transparent;
-      color: rgb(2, 51, 2);
+      color: rgb(8, 194, 8);
   }
+}
   
   @media all and (min-width: 1030px) {
     body { flex-direction: row; }
@@ -285,6 +286,7 @@ Flexbox Layout
       margin: 2rem;
       padding: 5px;
       background: transparent;
-      color: rgb(2, 51, 2);
+      color: rgb(231, 20, 38);
   }
+}
   
