@@ -120,16 +120,30 @@
                     <p></p>
                 </div>
             </div>
-
+            <!-- Here is a drag feaure-->
+            <div id="outerContainer">
+                <div id="dragonContainer">
+                  <div id="dragBall">
+            
+                  </div>
+                </div>
+              </div>
+            
+    
+                <h6>Dost thou believeht in dragons? 
+                    Because you can take the yellow ball and drag on this page! 
+                    Don't worry I've contained it within a cage.</h6>  
+                
+    
     </main>
 
     <footer class = "footer">
        <p>Thanks for Visiting!</p>
-    
-    <div class = "showTimeButton"> 
-        <p id = "showTime"></p>
-        <button id = "showTimeButton" onclick = "displayDate()">Show Date</button>
-   </div>   
+        <div class = "showTimeButton"> 
+            <p id = "showTime"></p>
+            <button id = "showTimeButton" onclick = "displayDate()">Show Date</button>
+        </div>
+          
 
 <nav class="tic-tac-toe">
     <ol>
@@ -145,7 +159,7 @@
         function getDataForm(e) {
             e.preventDefault();
             //this will collect data from the form
-            var formData = new FormData(form[0]);
+            let formData = new FormData(form[0]);
             alert(formData.get('nameField') + '-' + formData.get('emailField') + '-' + formData.get('passwordField') )
         }
         document.addEventListener('DOMContentLoaded', function() 

@@ -10,7 +10,6 @@ One of the first things I did was create a static page using basic HTML5 and CSS
 #JavaScript
 I learned how to implement a carousel for fun and to meet the animation requirement. The carousel also utilizes the nth-child property. 
 
-
 I also wanted to try my hand at the DOM and JS, so I added a way to change the color of the main heading.
 
 I looked up a tutorial on youtube that Ania Kubow had done on tic-tac-toe. I modified it and had fun adding the tic-tac-toe board, as it was by far the greatest JavaScript challenge. I asked the mentors how to set up the win-scenario and they walked me through it. 
@@ -24,6 +23,11 @@ I used the var, let and const declarations throughout the website as needed, and
 To fulfill the populate JS form/operation, I have included a way to change the heading color.
 
 The carousel required a little bit of trigonometry configuration in order to get the best rotation. 
+
+Lastly, I added a mathmatical operation and a drag operation. It is a random number generator that sends out an alert for a range, and responds to the user with a random number. I chose to give an alert, as this was novel to the website.
+
+The drag operation was more tricky, and I had to look up a tutorial but learned a lot. I tried the text feature, and then I switched it to a ball.
+
 
 #CSS
 As for CSS accessibility requirements, I decorated the buttons so that it had contrast. 
