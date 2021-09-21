@@ -31,8 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPlayer = 'playerX';
       }
     }
-  
-
 });
 const winArray = [
   //horizontal win condition
